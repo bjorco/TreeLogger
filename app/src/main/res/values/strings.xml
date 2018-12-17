@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">TreeLogger</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+
+    <string name="txt_samlpe">2341234</string>
+
+    <string name="txt_main_treenumber">Tre nummer:</string>
+    <string name="txt_main_treeheight">Høyde:</string>
+    <string name="txt_main_treewidth">Omkrets:</string>
+    <string name="btn_main_add">Legg til</string>
+    <string name="title_activity_overview">OverviewActivity</string>
+</resources>

@@ -1,0 +1,26 @@
+package com.bjornolsen.treelogger
+
+import android.arch.persistence.room.Room
+import android.arch.persistence.room.RoomDatabase
+import android.content.Context
+import com.bjornolsen.treelogger.data.Tree
+
+@android.arch.persistence.room.Database(entities = [Tree::class], version = 1)
+abstract class TreeDatabase : RoomDatabase() {
+    abstract fun treeDao(): TreeDao
+
+    companion object {
+        var INSTANCE: TreeDatabase? = null
+
+        fun getDataBase(context: Context) {
+            INSTANCE?: synchronized(TreeDatabase::class){
+                    INSTANCE?: Room.databaseBuilder(context, TreeDatabase::class.java, "treeDb").allowMainThreadQueries().build()
+                }
+            }
+        }
+
+        fun destroyDataBase(){
+            INSTANCE = null
+        }
+    }
+}
