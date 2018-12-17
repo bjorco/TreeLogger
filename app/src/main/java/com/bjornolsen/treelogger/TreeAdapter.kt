@@ -9,7 +9,7 @@ import android.view.ViewGroup
 import android.widget.TextView
 import com.bjornolsen.treelogger.data.Tree
 
-class TreeAdapter(context: Context, private val mTrees: LiveData<List<Tree>>) : RecyclerView.Adapter<TreeAdapter.ViewHolder>() {
+class TreeAdapter(context: Context, private val mTrees: ArrayList<Tree>) : RecyclerView.Adapter<TreeAdapter.ViewHolder>() {
     // Provide a reference to the views for each data item
     // Complex data items may need more than one view per item, and
     // you provide access to all the views for a data item in a view holder

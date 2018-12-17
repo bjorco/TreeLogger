@@ -12,11 +12,13 @@ abstract class TreeDatabase : RoomDatabase() {
     companion object {
         var INSTANCE: TreeDatabase? = null
 
-        fun getDataBase(context: Context) {
-            INSTANCE?: synchronized(TreeDatabase::class){
-                    INSTANCE?: Room.databaseBuilder(context, TreeDatabase::class.java, "treeDb").allowMainThreadQueries().build()
+        fun getDataBase(context: Context): TreeDatabase? {
+            if (INSTANCE == null){
+                synchronized(TreeDatabase::class){
+                    INSTANCE = Room.databaseBuilder(context, TreeDatabase::class.java, "treeDb").build()
                 }
             }
+            return INSTANCE
         }
 
         fun destroyDataBase(){

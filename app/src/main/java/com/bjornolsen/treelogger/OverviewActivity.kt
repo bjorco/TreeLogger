@@ -49,7 +49,8 @@ class OverviewActivity : AppCompatActivity() {
     }
 
     fun populateList(){
-        val listTrees = treeDao?.getTrees()
+        val livedata = treeDao?.getTrees()
+        val listTrees = ArrayList<Tree>()
         list_trees.adapter = TreeAdapter(this, listTrees)
         list_trees.layoutManager = LinearLayoutManager(this)
     }

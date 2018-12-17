@@ -8,7 +8,6 @@ import com.bjornolsen.treelogger.data.Tree
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
-    private val mDatabaseHelper = DatabaseHelper(this)
 
     private val mOnNavigationItemSelectedListener = BottomNavigationView.OnNavigationItemSelectedListener { item ->
         when (item.itemId) {
@@ -38,7 +37,7 @@ class MainActivity : AppCompatActivity() {
             val height = edt_main_height.text.toString().toDouble()
             val width = edt_main_circumferance.text.toString().toDouble()
             val tree = Tree(0, num, height, width)
-            mDatabaseHelper.addData(tree)
+            //mDatabaseHelper.addData(tree)
         }
     }
 
