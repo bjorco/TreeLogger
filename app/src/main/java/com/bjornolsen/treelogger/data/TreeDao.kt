@@ -1,4 +1,4 @@
-package com.bjornolsen.treelogger
+package com.bjornolsen.treelogger.data
 
 import android.arch.lifecycle.LiveData
 import android.arch.persistence.room.*

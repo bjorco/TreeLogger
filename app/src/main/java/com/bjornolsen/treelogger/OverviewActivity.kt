@@ -6,6 +6,8 @@ import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.LinearLayoutManager
 import kotlinx.android.synthetic.main.activity_overview.*
 import com.bjornolsen.treelogger.data.Tree
+import com.bjornolsen.treelogger.data.TreeDao
+import com.bjornolsen.treelogger.data.TreeDatabase
 
 
 class OverviewActivity : AppCompatActivity() {

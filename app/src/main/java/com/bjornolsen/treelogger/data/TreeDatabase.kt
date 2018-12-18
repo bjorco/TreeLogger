@@ -1,9 +1,8 @@
-package com.bjornolsen.treelogger
+package com.bjornolsen.treelogger.data
 
 import android.arch.persistence.room.Room
 import android.arch.persistence.room.RoomDatabase
 import android.content.Context
-import com.bjornolsen.treelogger.data.Tree
 
 @android.arch.persistence.room.Database(entities = [Tree::class], version = 1)
 abstract class TreeDatabase : RoomDatabase() {
