@@ -2,7 +2,6 @@ package com.bjornolsen.treelogger.data
 
 import android.arch.lifecycle.LiveData
 import android.arch.persistence.room.*
-import com.bjornolsen.treelogger.data.Tree
 
 @Dao
 interface TreeDao {
@@ -16,7 +15,7 @@ interface TreeDao {
     fun delete(tree: Tree)
 
     @Query("SELECT * FROM tree_table WHERE Number == :number")
-    fun getTreesByNumber(number: Int): LiveData<List<Tree>>
+    fun getTreesByNumber(number: Int): LiveData<Tree>
 
     @Query("SELECT * FROM tree_table")
     fun getTrees(): LiveData<List<Tree>>
